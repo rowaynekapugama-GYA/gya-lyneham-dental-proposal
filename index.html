@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lyneham Dental Care — Growth Strategy &amp; Website Rebuild · GYA</title>
+<meta name="description" content="A proposal from Generate Your Audience for Dr Patrick Huang and the team at Lyneham Dental Care: a complete website rebuild, local SEO foundation, paid acquisition program, and reputation system to capture Canberra's inner-north dental market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F3;
+    --paper-2:#F1ECE2;
+    --paper-3:#E7E1D2;
+    --ink:#0F1419;
+    --ink-2:#2A3138;
+    --muted:#6B6862;
+    --teal:#1F4D4A;
+    --teal-soft:#3A6E68;
+    --coral:#C36740;
+    --green:#2D6B3E;
+    --danger:#A63A2A;
+    --line:rgba(15,20,25,0.12);
+    --line-2:rgba(15,20,25,0.06);
+    --serif:'Fraunces',Georgia,serif;
+    --sans:'Inter','Helvetica Neue',Arial,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  body{
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(31,77,74,0.04) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(195,103,64,0.03) 0%, transparent 50%);
+    background-attachment:fixed;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:0 56px}
+  @media(max-width:780px){.wrap{padding:0 24px}}
+
+  /* ============ TOP BAR ============ */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,248,243,0.94);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:14px 0;
+    font-family:var(--mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;
+  }
+  .topbar-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+  .topbar-left{display:flex;align-items:center;gap:18px}
+  .topbar-brand{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--ink)}
+  .topbar-divider{width:1px;height:14px;background:var(--line)}
+  .topbar-status{color:var(--muted)}
+  .topbar-right{display:flex;gap:24px;color:var(--muted)}
+  .topbar-right .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--coral);margin-right:8px;vertical-align:middle}
+  @media(max-width:780px){.topbar-right{display:none}}
+
+  /* ============ HERO ============ */
+  header.hero{padding:80px 0 56px;position:relative;overflow:hidden}
+  .hero-mark{position:absolute;right:-40px;top:60px;font-family:var(--serif);font-weight:300;font-size:300px;line-height:1;color:rgba(31,77,74,0.06);user-select:none;letter-spacing:-0.04em}
+  @media(max-width:980px){.hero-mark{font-size:200px;right:-30px}}
+  @media(max-width:680px){.hero-mark{display:none}}
+
+  .hero-meta{display:flex;flex-wrap:wrap;gap:32px;font-family:var(--mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-bottom:48px;position:relative;z-index:1}
+  .hero-meta span{display:flex;flex-direction:column;gap:4px}
+  .hero-meta strong{font-family:var(--sans);font-weight:500;font-size:13px;text-transform:none;letter-spacing:0;color:var(--ink)}
+
+  .hero-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:24px;position:relative;z-index:1}
+  .hero-title{font-family:var(--serif);font-weight:300;font-size:clamp(48px,7vw,96px);line-height:1.02;letter-spacing:-0.025em;margin:0 0 32px;position:relative;z-index:1;max-width:920px}
+  .hero-title em{font-style:italic;color:var(--teal);font-weight:400}
+  .hero-sub{font-family:var(--serif);font-weight:300;font-size:22px;line-height:1.5;max-width:740px;color:var(--ink-2);margin:0 0 56px;position:relative;z-index:1;font-style:italic}
+
+  .hero-authors{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-top:32px;border-top:1px solid var(--line);position:relative;z-index:1}
+  @media(max-width:780px){.hero-authors{grid-template-columns:repeat(2,1fr);gap:24px}}
+  .hero-author .label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .hero-author .value{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink);line-height:1.4}
+
+  /* ============ GRID LAYOUT ============ */
+  .grid{display:grid;grid-template-columns:240px 1fr;gap:80px;padding:60px 0 120px;position:relative}
+  @media(max-width:980px){.grid{grid-template-columns:1fr;gap:40px;padding:40px 0 80px}}
+  aside.toc{position:sticky;top:80px;align-self:start;height:fit-content}
+  @media(max-width:980px){aside.toc{position:relative;top:0;padding:24px;background:var(--paper-2);border-radius:4px}}
+  .toc-label{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .toc ol{list-style:none;padding:0;margin:0;counter-reset:toc}
+  .toc li{counter-increment:toc;font-family:var(--mono);font-size:11px;letter-spacing:0.04em;text-transform:uppercase;padding:10px 0;border-bottom:1px solid var(--line-2);position:relative}
+  .toc li:before{content:counter(toc,decimal-leading-zero);font-size:9px;color:var(--muted);margin-right:14px;font-weight:500}
+  .toc a{color:var(--ink-2);text-decoration:none;transition:color .2s}
+  .toc a:hover{color:var(--coral)}
+
+  /* ============ MAIN CONTENT ============ */
+  main{min-width:0}
+  section{margin-bottom:120px;scroll-margin-top:80px}
+  @media(max-width:780px){section{margin-bottom:80px}}
+
+  .section-head{display:flex;align-items:flex-start;gap:32px;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+  .section-num{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);padding-top:8px;flex-shrink:0;min-width:64px}
+  .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:14px}
+  .section-title{font-family:var(--serif);font-weight:300;font-size:clamp(44px,5.5vw,72px);line-height:1;letter-spacing:-0.02em;margin:0}
+  .section-title em{font-style:italic;color:var(--teal);font-weight:400}
+
+  .lede{font-family:var(--serif);font-weight:300;font-size:22px;line-height:1.55;color:var(--ink-2);margin:0 0 40px;max-width:760px;font-style:italic}
+
+  /* ============ TYPOGRAPHY ============ */
+  h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.2;letter-spacing:-0.015em;color:var(--ink);margin:56px 0 24px;display:flex;align-items:baseline;gap:18px}
+  h3 .marker{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;color:var(--coral);background:var(--paper-2);padding:5px 9px;border-radius:3px;flex-shrink:0;position:relative;top:-2px}
+  h4{font-family:var(--sans);font-weight:600;font-size:15px;color:var(--ink);margin:32px 0 14px;letter-spacing:-0.01em}
+  p{margin:0 0 18px;color:var(--ink-2);font-size:16px}
+  p strong{color:var(--ink);font-weight:600}
+  ul,ol{margin:0 0 24px;padding-left:22px;color:var(--ink-2)}
+  li{margin-bottom:10px;font-size:16px}
+  li strong{color:var(--ink);font-weight:600}
+  em{font-style:italic}
+
+  /* ============ TABLES ============ */
+  .table-wrap{overflow-x:auto;margin:24px 0 36px;border:1px solid var(--line);border-radius:4px}
+  table{width:100%;border-collapse:collapse;font-size:14px;background:var(--paper);min-width:560px}
+  thead{background:var(--paper-2)}
+  th{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:14px 16px;font-weight:500;border-bottom:1px solid var(--line)}
+  td{padding:14px 16px;border-top:1px solid var(--line-2);color:var(--ink-2);vertical-align:top}
+  td strong{color:var(--ink)}
+  tr:hover td{background:rgba(31,77,74,0.025)}
+
+  /* ============ CALLOUTS ============ */
+  .callout{background:var(--paper-2);border-left:3px solid var(--teal);padding:24px 28px;margin:32px 0;border-radius:0 4px 4px 0}
+  .callout-label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:12px;font-weight:500}
+  .callout p:last-child{margin-bottom:0}
+
+  .warn{background:#FDF6F0;border-left:3px solid var(--coral);padding:24px 28px;margin:32px 0;border-radius:0 4px 4px 0}
+  .warn-label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--coral);margin-bottom:12px;font-weight:500}
+  .warn h4{margin-top:0;color:var(--ink)}
+  .warn p:last-child{margin-bottom:0}
+
+  .insight{background:linear-gradient(135deg,rgba(31,77,74,0.04) 0%,rgba(195,103,64,0.04) 100%);border:1px solid var(--line);padding:32px;margin:32px 0;border-radius:6px}
+  .insight-label{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--coral);margin-bottom:14px;font-weight:500}
+  .insight-title{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.3;color:var(--ink);margin:0 0 14px;letter-spacing:-0.01em}
+  .insight p:last-child{margin-bottom:0}
+
+  /* ============ STAT BLOCKS ============ */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0;border-radius:4px;overflow:hidden}
+  .stat{background:var(--paper);padding:24px 22px}
+  .stat .num{display:block;font-family:var(--serif);font-weight:300;font-size:44px;line-height:1;letter-spacing:-0.02em;color:var(--teal);margin-bottom:10px}
+  .stat .label{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);line-height:1.5}
+
+  /* ============ COMPETITOR CARD ============ */
+  .competitor{display:grid;grid-template-columns:140px 1fr;gap:32px;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:4px;margin-bottom:18px}
+  @media(max-width:680px){.competitor{grid-template-columns:1fr;gap:16px;padding:22px}}
+  .comp-tag{padding:16px;background:var(--paper-2);border-radius:3px;text-align:center}
+  .comp-tag .type{font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .comp-tag .threat{font-family:var(--serif);font-weight:500;font-size:28px;color:var(--coral);line-height:1}
+  .comp-tag.high .threat{color:var(--danger)}
+  .comp-tag.med .threat{color:var(--coral)}
+  .comp-tag.low .threat{color:var(--green)}
+  .comp-body h4{margin-top:0;font-size:18px;font-family:var(--serif);font-weight:500}
+  .comp-body p:last-child{margin-bottom:0}
+
+  /* ============ WORKFLOW / PLAN BLOCKS ============ */
+  .play{border:1px solid var(--line);border-radius:6px;background:var(--paper);padding:28px 32px;margin-bottom:18px;position:relative;overflow:hidden}
+  .play:before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--teal)}
+  .play-title{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--ink);margin:0 0 8px;letter-spacing:-0.01em}
+  .play-tag{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--coral);margin-bottom:18px;font-weight:500}
+  .play p:last-child{margin-bottom:0}
+
+  /* ============ ROADMAP ============ */
+  .roadmap{display:grid;grid-template-columns:1fr;gap:24px;margin:32px 0}
+  .phase{padding:28px 32px;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;grid-template-columns:200px 1fr;gap:36px}
+  @media(max-width:780px){.phase{grid-template-columns:1fr;gap:18px;padding:22px}}
+  .phase-range{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+  .phase-range .big{display:block;font-family:var(--serif);font-weight:300;font-size:48px;line-height:1;letter-spacing:-0.02em;color:var(--teal);margin:8px 0 4px;font-style:italic}
+  .phase-range .sub{display:block;color:var(--ink-2);margin-top:6px;font-size:11px}
+  .phase h3{margin-top:0;font-size:22px;font-family:var(--serif);font-weight:500}
+  .week{padding:14px 0;border-bottom:1px solid var(--line-2);font-size:14px;color:var(--ink-2);display:flex;gap:16px}
+  .week:last-child{border-bottom:0}
+  .week strong{flex-shrink:0;width:80px;font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--coral);padding-top:2px}
+
+  /* ============ INVESTMENT TIERS ============ */
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0}
+  @media(max-width:780px){.tiers{grid-template-columns:1fr}}
+  .tier{padding:32px 28px;background:var(--paper);border:1px solid var(--line);border-radius:6px;position:relative}
+  .tier.featured{border-color:var(--teal);border-width:2px;background:linear-gradient(180deg,var(--paper) 0%,rgba(31,77,74,0.02) 100%)}
+  .tier.featured:after{content:'Recommended';position:absolute;top:-12px;left:24px;background:var(--teal);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:4px 12px;border-radius:3px;font-weight:500}
+  .tier-name{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .tier-title{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--ink);margin:0 0 14px;letter-spacing:-0.01em}
+  .tier-price{font-family:var(--serif);font-weight:300;font-size:44px;line-height:1;letter-spacing:-0.02em;color:var(--teal);margin:0 0 4px}
+  .tier-price .small{font-size:14px;color:var(--muted)}
+  .tier-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  .tier ul{padding-left:0;list-style:none;margin:0}
+  .tier ul li{font-size:13px;line-height:1.55;margin-bottom:10px;padding-left:22px;position:relative;color:var(--ink-2)}
+  .tier ul li:before{content:'';position:absolute;left:0;top:7px;width:10px;height:10px;border:1.5px solid var(--teal);border-right:0;border-top:0;transform:rotate(-45deg) translateY(-2px)}
+
+  /* ============ FOOTER ============ */
+  footer{padding:80px 0 60px;background:var(--paper-2);border-top:1px solid var(--line);margin-top:80px}
+  .mark-out{font-family:var(--serif);font-weight:300;font-size:180px;line-height:1;letter-spacing:-0.04em;color:rgba(31,77,74,0.08);position:absolute;right:0;top:20px;user-select:none}
+  @media(max-width:780px){.mark-out{font-size:100px}}
+  .footer-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative;z-index:1}
+  @media(max-width:780px){.footer-meta{grid-template-columns:repeat(2,1fr);gap:24px}}
+  .footer-meta div{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+  .footer-meta strong{display:block;font-family:var(--sans);font-size:13px;color:var(--ink);text-transform:none;letter-spacing:0;font-weight:500;margin-top:6px}
+
+  /* ============ REVEAL ============ */
+  [data-reveal]{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s ease}
+  [data-reveal].in{opacity:1;transform:none}
+
+  /* ============ PRINT ============ */
+  @media print{
+    .topbar,aside.toc{display:none}
+    .grid{grid-template-columns:1fr;padding:0;gap:0}
+    section{page-break-inside:avoid;margin-bottom:60px}
+    .hero-mark,.mark-out{display:none}
+    body{background:white}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-brand">Generate Your Audience</span>
+      <span class="topbar-divider"></span>
+      <span class="topbar-status">Proposal Document</span>
+    </div>
+    <div class="topbar-right">
+      <span><span class="dot"></span>Confidential — For Lyneham Dental Care</span>
+      <span>Rev. 01 / May 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<div class="wrap">
+<header class="hero">
+  <div class="hero-mark">LDC</div>
+  <div class="hero-eyebrow">A proposal from Generate Your Audience</div>
+  <h1 class="hero-title">More patients,<br>a modern presence,<br>a clinic that <em>compounds.</em></h1>
+  <p class="hero-sub">A complete website rebuild and a 12-month growth program for Lyneham Dental Care — designed to capture Canberra's inner-north dental market, defend the practice against the clinic in your own building, and turn two decades of patient goodwill into a marketing engine that works while you're chairside.</p>
+
+  <div class="hero-authors">
+    <div class="hero-author"><div class="label">Prepared for</div><div class="value">Dr Patrick Huang<br>Lyneham Dental Care</div></div>
+    <div class="hero-author"><div class="label">Prepared by</div><div class="value">Rowayne<br>Generate Your Audience</div></div>
+    <div class="hero-author"><div class="label">Date</div><div class="value">15 May 2026</div></div>
+    <div class="hero-author"><div class="label">Validity</div><div class="value">60 days from issue</div></div>
+  </div>
+</header>
+</div>
+
+<!-- ============ MAIN GRID ============ -->
+<div class="wrap">
+<div class="grid">
+
+<!-- TOC -->
+<aside class="toc">
+  <div class="toc-label">Contents</div>
+  <ol>
+    <li><a href="#part-1">Executive summary</a></li>
+    <li><a href="#part-2">About GYA</a></li>
+    <li><a href="#part-3">What we observed</a></li>
+    <li><a href="#part-4">Canberra market</a></li>
+    <li><a href="#part-5">Competitor landscape</a></li>
+    <li><a href="#part-6">The opportunity</a></li>
+    <li><a href="#part-7">The plan</a></li>
+    <li><a href="#part-8">Website rebuild</a></li>
+    <li><a href="#part-9">90-day roadmap</a></li>
+    <li><a href="#part-10">Investment</a></li>
+    <li><a href="#part-11">Why GYA</a></li>
+    <li><a href="#part-12">Next steps</a></li>
+  </ol>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+<!-- ============ PART 1 EXECUTIVE SUMMARY ============ -->
+<section id="part-1" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 01</div>
+    <div>
+      <div class="section-label">Part One</div>
+      <h2 class="section-title">Executive<br><em>summary.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Two decades of strong clinical reputation. A team of four dentists. A loyal patient base built on word of mouth. And a digital presence that hasn't been seriously updated in three years — at exactly the moment when the practice in your own building is winning the Google search every patient runs before they pick up the phone.</p>
+
+  <p>Lyneham Dental Care has earned the right to be the dominant inner-north Canberra dental practice. The clinical foundation is there, the team is there, the location is there. What's missing is the digital infrastructure to convert two decades of goodwill into a steady, predictable flow of new patients — and to defend that flow against newer, more digitally aggressive competitors.</p>
+
+  <p>This proposal lays out a complete program to do exactly that:</p>
+
+  <ol>
+    <li><strong>A website rebuild</strong> that replaces the current site (which last published a blog in April 2023) with a modern, fast, conversion-focused presence designed around the way patients actually search and book in 2026.</li>
+    <li><strong>A local SEO foundation</strong> that pushes Lyneham Dental Care into Google's local map pack for the high-intent searches that drive new patient bookings in the inner north — "dentist near me", "dentist Lyneham", "emergency dentist Canberra" — and the service-specific terms that drive higher-value treatments.</li>
+    <li><strong>A paid acquisition program</strong> (Google Ads + Meta) sized to the practice's capacity, designed to fill the books on the services where the unit economics make sense (Invisalign, implants, cosmetic, new patient exams).</li>
+    <li><strong>A reputation and reactivation system</strong> that turns the practice's existing 20+ years of patient goodwill into Google reviews, referrals, and recall bookings — using the SmileOx CRM platform GYA specialises in for dental practices.</li>
+  </ol>
+
+  <div class="insight">
+    <div class="insight-label">The single most important observation</div>
+    <h3 class="insight-title">Dental Embassy isn't your nearby competitor. They're in your building.</h3>
+    <p>Dental Embassy operates from <strong>Suite 2, 45 Hall Street</strong> — the same address as Lyneham Dental Care. They hold a 5.0 average Google rating across 105+ reviews, a modern website, an active blog, two locations (Lyneham + Braddon), and they are aggressively winning the "Lyneham dentist" search. Every patient who Googles "dentist near me" within walking distance of 45 Hall Street is being shown both practices side by side — and right now, the patient-facing signals heavily favour Dental Embassy. Closing that gap is the single highest-value move this proposal makes possible.</p>
+  </div>
+
+  <p>The engagement has three tiers — Foundation (SEO foundation), Growth (SEO + Google Ads management), and Scale (the full lead-generation engine with SmileOx CRM integration, Meta lead-gen, social content production and reviews automation, all managed by GYA). The one-off website rebuild sits underneath all three. Pricing for each tier is in §10. Paid media spend (Google Ads, Meta) is always paid directly by the practice to the ad platforms — GYA never marks up media; the retainer covers strategy, build, and management only.</p>
+</section>
+
+<!-- ============ PART 2 ABOUT GYA ============ -->
+<section id="part-2" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 02</div>
+    <div>
+      <div class="section-label">Part Two</div>
+      <h2 class="section-title">About<br>Generate Your <em>Audience.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">GYA is a Sydney-based digital marketing agency that specialises in dental practices. Not "marketing agencies that also do dental" — dental is the practice we built the agency around, and the discipline our team has the most repetitions in.</p>
+
+  <h3><span class="marker">2.1</span>What we do</h3>
+  <p>We are a full-service growth partner for dental practices. Practically that means we build the website, run the Google Ads, run the Meta Ads, manage the SEO, configure the CRM (we are SmileOx specialists), build out the email and SMS automations, and report on it all monthly — so the practice principal has one accountable partner rather than five vendors who blame each other when bookings slow down.</p>
+
+  <h3><span class="marker">2.2</span>Why dental specifically</h3>
+  <p>Dental practices are a specific creature. Treatment cycles are long (most patients book 6-monthly check-ups; cosmetic conversions take months of consideration). Margins vary wildly by treatment (a check-up vs a full-arch implant case is a 100× difference). AHPRA compliance affects every line of copy a practice publishes. The patient psychology around fear, perceived cost, and trust is unlike any other category. We learned all of that the hard way across dozens of dental engagements; it now sits as institutional knowledge that means we don't make rookie mistakes with our clients' budgets.</p>
+
+  <h3><span class="marker">2.3</span>A selection of dental clients</h3>
+  <p>To give a sense of the breadth and depth of the dental work GYA has delivered:</p>
+  <ul>
+    <li><strong>Horizon Dental</strong> (Sydney CBD) — Full website build, Meta ad campaigns with AHPRA-compliant copy, SMS follow-up automation, SmileOx CRM setup.</li>
+    <li><strong>Synergy Dental Group</strong> (Parkdale VIC) — Multi-page website build, Google Ads, paid social.</li>
+    <li><strong>Implant 360</strong> (Western Sydney) — Dr Ramesh Harichandran's specialist implant practice; full digital build with AHPRA compliance documentation.</li>
+    <li><strong>Crestmead Dental</strong> (QLD) — Online booking system with Stripe deposit capture deployed to a custom subdomain.</li>
+    <li><strong>Dental House Group</strong> — Multi-clinic operator (Dental Couture + Couture Implant Centre); premium proposal &amp; digital strategy.</li>
+    <li><strong>Haberfield Dental Practice</strong> (Sydney) — Invisalign Smile Event campaign including Meta ads, lead form, AI chatbot, and full HTML email design.</li>
+    <li><strong>Grey Street Dentist</strong> (St Kilda VIC) — Large-scale multi-page website with brand compliance scripting.</li>
+    <li><strong>Coastal Dental</strong> (Gosford NSW) — Full website plus HTML email marketing campaigns.</li>
+    <li><strong>My Dentist</strong> (Brisbane) — Welcome-back EDM, Google Ads landing page, and onboarding for new associate Dr Lize Potgieter.</li>
+  </ul>
+
+  <p>At any one time GYA is actively working with 100+ dental clinics across Australia, which means the patterns of what works and what doesn't are observed in real time across the network — that observational advantage flows into every decision we make for an individual practice.</p>
+</section>
+
+<!-- ============ PART 3 WHAT WE OBSERVED ============ -->
+<section id="part-3" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 03</div>
+    <div>
+      <div class="section-label">Part Three</div>
+      <h2 class="section-title">What we<br><em>observed.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">An honest audit of Lyneham Dental Care's current digital footprint. Not a sales pitch — a diagnostic. Some of what's here is already strong, and we'll say so. The rest is the opportunity surface this proposal addresses.</p>
+
+  <h3><span class="marker">3.1</span>The website (lynehamdentalcare.com.au)</h3>
+
+  <h4>What's working</h4>
+  <ul>
+    <li>The site exists, is indexed by Google, has a clear practice identity, and lists the four dentists with photos and credentials.</li>
+    <li>Service pages cover the core categories (general, children's, cosmetic).</li>
+    <li>Contact details and address are clearly visible.</li>
+    <li>The practice ranks for its own brand name (as it should).</li>
+  </ul>
+
+  <h4>What's holding it back</h4>
+  <ul>
+    <li><strong>The content is dormant.</strong> The most recent blog post is dated <strong>28 April 2023</strong>. Google's algorithm explicitly favours sites with fresh, regularly published content for local service businesses. Three years of silence is a signal to Google (and prospective patients) that the practice may have closed or stopped operating digitally.</li>
+    <li><strong>The design feels dated.</strong> Patient expectations for what a dental website should look like have shifted significantly in the last 3–4 years. Newer competitors in the inner north present like modern hospitality brands; the current site reads as functional but uninspired.</li>
+    <li><strong>No visible online booking.</strong> Patients in 2026 increasingly expect to book in two taps from their phone, late at night, without speaking to anyone. The current journey forces a phone call.</li>
+    <li><strong>Limited conversion architecture.</strong> No prominent calls to action, no offer or new-patient incentive, no live chat, no exit-intent capture. Every visitor who doesn't pick up the phone is lost.</li>
+    <li><strong>Mobile experience needs review.</strong> The majority of dental searches happen on mobile devices; mobile load speed and touch targets are an immediate trust signal.</li>
+    <li><strong>SEO foundations are basic.</strong> Page titles, meta descriptions, schema markup, and internal linking can all be substantially improved without changing a single visible word on the page.</li>
+  </ul>
+
+  <h3><span class="marker">3.2</span>Google organic search position</h3>
+
+  <p>We tested core commercial keywords against Google AU (Canberra ACT location). Two broad patterns emerge:</p>
+
+  <p><strong>Strong:</strong> The practice ranks well for its own name and for very specific long-tail terms.<br>
+  <strong>Weak:</strong> The practice is largely invisible on the high-volume, commercial-intent searches that drive new patient bookings in Canberra.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Search query</th><th style="text-align:center">Est. AU vol. / mo</th><th>Current position</th><th>Who's winning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>dentist canberra</strong></td><td style="text-align:center">2,400</td><td>Not on page 1</td><td>Modern Dentistry, Dental Embassy, Maven, Preventive Dentistry</td></tr>
+        <tr><td>dentist lyneham</td><td style="text-align:center">110</td><td>Page 1 (lower)</td><td>Dental Embassy &amp; Lyneham Dental Care competing</td></tr>
+        <tr><td>dentist near me <em>(in Lyneham)</em></td><td style="text-align:center">14,800<sup>*</sup></td><td>Map pack present</td><td>Dental Embassy ranks above on reviews</td></tr>
+        <tr><td><strong>emergency dentist canberra</strong></td><td style="text-align:center">1,000</td><td>Not on page 1</td><td>Maven Dental, Downtown Dental, Dentist @ Dickson</td></tr>
+        <tr><td><strong>invisalign canberra</strong></td><td style="text-align:center">880</td><td>Not on page 1</td><td>Specialist orthodontic providers + Maven</td></tr>
+        <tr><td><strong>cosmetic dentist canberra</strong></td><td style="text-align:center">320</td><td>Not on page 1</td><td>Dental Embassy, Preventive Dentistry, Dickson Modern</td></tr>
+        <tr><td><strong>dental implants canberra</strong></td><td style="text-align:center">590</td><td>Not on page 1</td><td>Specialist clinics + Maven</td></tr>
+        <tr><td><strong>teeth whitening canberra</strong></td><td style="text-align:center">480</td><td>Not on page 1</td><td>Dental Embassy, Dickson Modern</td></tr>
+        <tr><td>wisdom teeth removal canberra</td><td style="text-align:center">480</td><td>Not on page 1</td><td>Specialist + general practices</td></tr>
+        <tr><td>kids dentist canberra</td><td style="text-align:center">90</td><td>Not on page 1</td><td>Family-positioned practices</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--muted);font-style:italic"><sup>*</sup>"Dentist near me" volume is national but resolves locally — actual addressable volume in inner-north Canberra is in the order of 600–900 searches/month. All volumes are estimates based on observed Australian local-search patterns; we'll verify with Google Keyword Planner before any paid spend.</p>
+
+  <h3><span class="marker">3.3</span>Google Business Profile &amp; the local map pack</h3>
+
+  <p>The Google Business Profile is the most commercially valuable digital asset a dental practice owns. For "dentist near me" searches within Lyneham/Dickson/Braddon, Google shows three local map results above the organic listings. That three-pack is where 70%+ of patient clicks go.</p>
+
+  <p>Lyneham Dental Care has a GBP listing, but it appears to be under-optimised:</p>
+  <ul>
+    <li><strong>Reviews:</strong> Substantially fewer than Dental Embassy's 105+. The quantity and recency of reviews is the single biggest map-pack ranking factor.</li>
+    <li><strong>Posts:</strong> No active "Google Posts" — a free weekly micro-content channel that signals practice activity to Google.</li>
+    <li><strong>Photos:</strong> Limited recent photography of the practice interior, team, before/after work.</li>
+    <li><strong>Q&amp;A:</strong> Practice should pre-populate common patient questions; competitors are doing this.</li>
+    <li><strong>Services menu:</strong> Detailed services menu with prices/from-prices is increasingly visible in local search and drives conversion.</li>
+    <li><strong>Categories:</strong> Primary and secondary GBP categories should be audited and optimised.</li>
+  </ul>
+
+  <h3><span class="marker">3.4</span>Reviews &amp; reputation</h3>
+
+  <p>The practice has positive reviews — patients praise specific dentists by name (Dr Patrick Huang, Dr Kennneth Ho, Dr Kaitlyn) and mention things like follow-up calls the day after a procedure and a welcoming reception. That kind of qualitative signal is gold and shows the underlying clinical and front-of-house experience is excellent.</p>
+
+  <p>The issue is volume and freshness. Dental Embassy is sitting on 105+ Google reviews from 5.0 average. The math here is brutal: when a patient compares two practices at the same address and one has 100+ recent reviews while the other has a handful, the choice is made before they look at anything else. There's no clinical reason for the gap — only a systems reason. This is solvable in 6–8 weeks with the right review-request automation.</p>
+
+  <h3><span class="marker">3.5</span>Social media presence</h3>
+
+  <p>Limited active presence across Facebook and Instagram. For a dental practice with a 20-year history, this isn't a primary growth channel, but it is a trust/legitimacy signal — patients who Google the practice often click through to social to see "is this place still active?" Even a low-cadence presence (1 post per week, mix of team, behind-the-scenes, before/afters where consent allows, community involvement) earns its keep.</p>
+
+  <h3><span class="marker">3.6</span>Paid advertising</h3>
+
+  <p>No detectable Google Ads presence on competitive searches; no detectable Meta advertising. This means there is a clean slate to build paid acquisition properly — and conversely, competitors are not currently bidding aggressively on the practice's potential keywords, which lowers the cost-per-click materially.</p>
+</section>
+
+<!-- ============ PART 4 CANBERRA MARKET ============ -->
+<section id="part-4" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 04</div>
+    <div>
+      <div class="section-label">Part Four</div>
+      <h2 class="section-title">The Canberra<br><em>market.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Lyneham sits in one of the most attractive dental catchments in Australia: high household incomes, dense professional population, strong private health insurance penetration, low Medicare-bulk-bill dependence, and a culture of preventative dentistry.</p>
+
+  <h3><span class="marker">4.1</span>The catchment</h3>
+
+  <div class="stats">
+    <div class="stat"><span class="num">~470k</span><span class="label">ACT population</span></div>
+    <div class="stat"><span class="num">$2,180</span><span class="label">Median weekly household income (ACT) — highest in AU</span></div>
+    <div class="stat"><span class="num">75%+</span><span class="label">Private health insurance penetration (ACT)</span></div>
+    <div class="stat"><span class="num">6,400</span><span class="label">Lyneham postcode (2602) residents</span></div>
+  </div>
+
+  <p>Inner-north Canberra — Lyneham, Dickson, Braddon, Turner, O'Connor, Ainslie, Watson, Downer — is a dense, walkable, transit-connected catchment of approximately 35,000 residents with median age skewing professional (30–55), high private health insurance penetration, and strong willingness to pay for cosmetic and elective dentistry. The light rail down Northbourne Avenue (and the Gungahlin extension running along the practice's western flank) increases the addressable catchment significantly beyond the immediate suburb.</p>
+
+  <h3><span class="marker">4.2</span>Search demand — by service category</h3>
+
+  <p>The chart below estimates monthly Google searches in the broader Canberra/ACT market for the categories that matter most for a general dental practice with cosmetic capability. The third column flags whether the term is dominated by general practices (where Lyneham Dental Care can compete directly) or specialist providers (where the play is different — typically partnership or referral-focused).</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Service category</th><th style="text-align:center">Est. AU vol. / mo (ACT)</th><th>Buyer intent</th><th>Competitive shape</th></tr></thead>
+      <tbody>
+        <tr><td><strong>General check-up &amp; clean</strong></td><td style="text-align:center">600–900</td><td>High — booking-ready</td><td>General practice — winnable</td></tr>
+        <tr><td><strong>Emergency / pain</strong></td><td style="text-align:center">800–1,200</td><td>Very high — same-day</td><td>General practice — high lifetime value</td></tr>
+        <tr><td><strong>Invisalign / clear aligners</strong></td><td style="text-align:center">700–900</td><td>High — research-then-book</td><td>Mixed — general &amp; specialist</td></tr>
+        <tr><td><strong>Dental implants</strong></td><td style="text-align:center">500–700</td><td>High consideration, high value</td><td>Specialist-led but general competes</td></tr>
+        <tr><td><strong>Cosmetic dentistry / veneers</strong></td><td style="text-align:center">300–500</td><td>Considered, high value</td><td>General practice — winnable</td></tr>
+        <tr><td><strong>Teeth whitening</strong></td><td style="text-align:center">400–600</td><td>Quick conversion</td><td>General practice — promo-friendly</td></tr>
+        <tr><td><strong>Wisdom teeth removal</strong></td><td style="text-align:center">400–600</td><td>High intent</td><td>General + oral surgery</td></tr>
+        <tr><td><strong>Children's dentistry</strong></td><td style="text-align:center">80–120</td><td>Loyalty &amp; family lifetime value</td><td>Family-positioned wins</td></tr>
+        <tr><td><strong>Root canal</strong></td><td style="text-align:center">250–350</td><td>High intent, problem-driven</td><td>General + endodontists</td></tr>
+        <tr><td><strong>Dental anxiety / sedation</strong></td><td style="text-align:center">100–200</td><td>Niche, high-value differentiator</td><td>Underserved — opportunity</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Rough total addressable search demand for the categories where Lyneham Dental Care has a credible claim: <strong>~5,000–7,000 commercial-intent searches per month</strong> in the ACT/Canberra geographic. Capturing 1–2% of that into the practice is the order of magnitude this proposal is sized against.</p>
+
+  <h3><span class="marker">4.3</span>Search demand — by suburb modifier</h3>
+
+  <p>Local SEO is increasingly hyperlocal. Patients search not just "dentist canberra" but "dentist lyneham", "dentist dickson", "dentist near me". Each suburb-specific query is lower volume but radically higher intent — and the local map pack is the dominant result.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Suburb modifier</th><th style="text-align:center">Est. vol. / mo</th><th>Strategic value</th></tr></thead>
+      <tbody>
+        <tr><td>dentist lyneham</td><td style="text-align:center">110</td><td>Core — must own #1</td></tr>
+        <tr><td>dentist dickson</td><td style="text-align:center">210</td><td>Adjacent — winnable with content + reviews</td></tr>
+        <tr><td>dentist braddon</td><td style="text-align:center">170</td><td>Adjacent — Dental Embassy has 2nd location here, so contested</td></tr>
+        <tr><td>dentist ainslie</td><td style="text-align:center">110</td><td>Walking distance — winnable</td></tr>
+        <tr><td>dentist turner</td><td style="text-align:center">90</td><td>5 min drive — winnable</td></tr>
+        <tr><td>dentist o'connor</td><td style="text-align:center">70</td><td>Walking distance — winnable</td></tr>
+        <tr><td>dentist watson</td><td style="text-align:center">70</td><td>Light rail catchment — winnable</td></tr>
+        <tr><td>dentist downer / hackett</td><td style="text-align:center">40–60</td><td>Local — winnable</td></tr>
+        <tr><td>dentist north canberra / inner north</td><td style="text-align:center">90</td><td>Category-defining term — own this</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">Local SEO insight</div>
+    <p>The total addressable hyperlocal demand across the 8 inner-north suburb modifiers totals around <strong>900–1,200 searches per month</strong> with very high commercial intent. A well-executed local SEO program targets capturing the #1 map-pack position on as many of those suburbs as possible, supported by a dedicated landing page per suburb that signals to Google "this practice genuinely serves [suburb]." Dentist @ Dickson is currently the inner-north operator most aggressively executing this playbook.</p>
+  </div>
+</section>
+
+<!-- ============ PART 5 COMPETITOR LANDSCAPE ============ -->
+<section id="part-5" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 05</div>
+    <div>
+      <div class="section-label">Part Five</div>
+      <h2 class="section-title">Competitor<br><em>landscape.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Eleven competing practices within a 15-minute drive of 45 Hall Street. Three of them are competing for the same patient on the same Google result page. One of them is competing from inside the same building. Here's the read on each.</p>
+
+  <div class="competitor">
+    <div class="comp-tag high">
+      <div class="type">Threat Level</div>
+      <div class="threat">A1</div>
+      <div class="type">Same Building</div>
+    </div>
+    <div class="comp-body">
+      <h4>Dental Embassy — Suite 2, 45 Hall Street, Lyneham</h4>
+      <p><strong>Why they matter:</strong> Same physical address. Currently the dominant digital practice in Lyneham — 5.0 average Google rating across 105+ reviews, modern website at dentalembassy.com.au, active blog, professional photography, online booking via Healthengine. Two locations (Lyneham + Braddon) which doubles their local SEO footprint. Led by Dr Sri Karumuri.</p>
+      <p><strong>Where they're winning:</strong> Reviews volume, modern website, multi-location SEO, an active brand voice. Every patient comparing "dentist near me" in Lyneham sees Dental Embassy above Lyneham Dental Care on review count and recency.</p>
+      <p><strong>Where they're beatable:</strong> The clinical depth and longevity of Lyneham Dental Care (20+ years vs Dental Embassy's newer brand) is a story that hasn't been told. Patient relationships built over a decade in chair-time matter — but the website needs to actually <em>say</em> that.</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag high">
+      <div class="type">Threat Level</div>
+      <div class="threat">A2</div>
+      <div class="type">Local SEO Leader</div>
+    </div>
+    <div class="comp-body">
+      <h4>Dentist @ Dickson — dentistatdickson.com.au</h4>
+      <p><strong>Why they matter:</strong> Executing the inner-north multi-suburb SEO playbook better than anyone. Has dedicated landing pages for "Dental Check Up in Lyneham", "Dental Check Up in Ainslie", "Dental Check Up in Braddon", "Dental Check Up in Woden" — even though they only have one physical location.</p>
+      <p><strong>The lesson:</strong> Google rewards practices that publish suburb-specific content. This is something Lyneham Dental Care can replicate (and arguably do better — because the practice is actually <em>in</em> the inner north).</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag med">
+      <div class="type">Threat Level</div>
+      <div class="threat">B</div>
+      <div class="type">Adjacent</div>
+    </div>
+    <div class="comp-body">
+      <h4>Dickson Modern Dental — Dr Tran</h4>
+      <p>Strong word-of-mouth in the Canberra parenting community. Mentioned repeatedly in Region Canberra's "best dentists" community thread, especially for kids and nervous adults. Local Facebook recommendations consistently call out Dr Tran by name. Suggests their patient experience is producing organic referral momentum — exactly the kind of asset Lyneham Dental Care could build on top of its existing 20-year base.</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag med">
+      <div class="type">Threat Level</div>
+      <div class="threat">B</div>
+      <div class="type">Civic Trust Anchor</div>
+    </div>
+    <div class="comp-body">
+      <h4>Preventive Dentistry — Civic &amp; Braddon (~50 years)</h4>
+      <p>The longest-established practice in Canberra Civic. Pulls patients on legacy trust and city-centre convenience. Strong with the 50+ professional market. Not aggressive digitally, but doesn't have to be — they sit on a generational referral base.</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag med">
+      <div class="type">Threat Level</div>
+      <div class="threat">B</div>
+      <div class="type">Multi-Location</div>
+    </div>
+    <div class="comp-body">
+      <h4>Maven Dental Belconnen — Dr Ruchira Singhi</h4>
+      <p>Belconnen-based but pulls patients from across north Canberra. Maven is a national group, which means deeper marketing pockets and standardised SEO. Dr Ruchira Singhi has strong personal reviews. Less of a direct competitor for Lyneham residents specifically, more for the Belconnen catchment.</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag med">
+      <div class="type">Threat Level</div>
+      <div class="threat">B</div>
+      <div class="type">Civic Adjacent</div>
+    </div>
+    <div class="comp-body">
+      <h4>Downtown Dental — Braddon / Canberra City</h4>
+      <p>Located in The Mark building on Ainslie Avenue. Targets the Canberra Centre / Braddon professional foot traffic. Open weekends including Sundays — competitive advantage on convenience. Site reads as professional but not actively marketed.</p>
+    </div>
+  </div>
+
+  <div class="competitor">
+    <div class="comp-tag low">
+      <div class="type">Threat Level</div>
+      <div class="threat">C</div>
+      <div class="type">Specialist / Group</div>
+    </div>
+    <div class="comp-body">
+      <h4>Specialist clinics &amp; multi-site groups (Modern Dentistry, Smile.com.au, etc.)</h4>
+      <p>Larger groups operating across Canberra and nationally. Win on scale and brand awareness; lose on the local relationship aspect that an independent owner-operated practice like Lyneham Dental Care can build. Not the primary competitive set, but they consume search inventory CCR competes against on broad terms like "dentist canberra".</p>
+    </div>
+  </div>
+
+  <h3><span class="marker">5.1</span>What the winners are doing</h3>
+
+  <p>Looking across the top-performing dental practices in Canberra, five behaviours show up consistently:</p>
+
+  <ol>
+    <li><strong>Active review programs.</strong> 100+ Google reviews, with new ones added monthly. Reviews are answered, both positive and negative. Specific dentists are named in reviews — a signal of front-of-house effectively prompting patients post-treatment.</li>
+    <li><strong>Modern, fast websites with online booking.</strong> Three taps from landing on the homepage to a confirmed appointment. Healthengine, HotDoc, or native booking widgets are standard.</li>
+    <li><strong>Active Google Business Profile.</strong> Weekly Google Posts, fresh photography, complete services menus, populated Q&amp;A.</li>
+    <li><strong>Suburb-specific content.</strong> Landing pages targeting every suburb in their effective catchment, not just the one they're located in.</li>
+    <li><strong>A clear cosmetic or specialty proposition.</strong> Most successful general practices have one or two services they actively brand around — Invisalign, smile makeover, anxiety-friendly, family — rather than positioning as "generic dentist."</li>
+  </ol>
+</section>
+
+<!-- ============ PART 6 OPPORTUNITY ============ -->
+<section id="part-6" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 06</div>
+    <div>
+      <div class="section-label">Part Six</div>
+      <h2 class="section-title">The<br><em>opportunity.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Most of the work to be the dominant inner-north Canberra dental practice has already been done. The remaining work is digital, not clinical — and it's well within reach inside 90 days.</p>
+
+  <p>Three honest reasons Lyneham Dental Care can win this market:</p>
+
+  <h3><span class="marker">6.1</span>Twenty years of clinical credibility</h3>
+  <p>Two decades in practice at the same address is a moat that newer competitors — including the practice in the same building — cannot replicate at any speed. The reviews that exist already point repeatedly to the gentleness, professionalism, and follow-through of named dentists. The clinical foundation is in place. The marketing infrastructure just hasn't caught up.</p>
+
+  <h3><span class="marker">6.2</span>A team of four dentists creates real capacity</h3>
+  <p>Many local competitors are single-dentist owner-operated practices with hard capacity limits. Lyneham Dental Care can absorb significantly more new patient bookings without compromising chair time per patient — which means the marketing investment doesn't immediately bottleneck against chair availability. A four-dentist practice can scale 30–50% in new patient flow without operational strain, particularly if associate-level dentists have capacity in their books.</p>
+
+  <h3><span class="marker">6.3</span>The catchment is one of Australia's best</h3>
+  <p>High income, high private health insurance, dense walkable population, public-transit connected, professional demographic that values preventative and cosmetic dentistry. There are not many catchments in Australia where the patient willingness-to-pay supports cosmetic dentistry, Invisalign, and implant work at the volumes inner-north Canberra can.</p>
+
+  <div class="insight">
+    <div class="insight-label">The strategic positioning</div>
+    <h3 class="insight-title">Lyneham Dental Care is "the established practice, modernised."</h3>
+    <p>The brand story writes itself: 20 years in Lyneham. Four trusted dentists. The same address, the same clinical depth, the same patient relationships — now with the modern booking, the modern website, and the digital convenience patients expect in 2026. That's the positioning the new site needs to communicate, and the positioning every ad campaign should reinforce. It's a story Dental Embassy literally cannot tell.</p>
+  </div>
+</section>
+
+<!-- ============ PART 7 PLAN ============ -->
+<section id="part-7" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 07</div>
+    <div>
+      <div class="section-label">Part Seven</div>
+      <h2 class="section-title">The<br><em>plan.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Seven workstreams. Each addresses a specific gap or opportunity from the audit. Together they form a complete patient-acquisition system — designed to run continuously, with monthly reporting back to Dr Patrick.</p>
+
+  <div class="play">
+    <div class="play-tag">Workstream 01 · Foundation</div>
+    <div class="play-title">Website rebuild &amp; conversion architecture</div>
+    <p>A complete replacement of lynehamdentalcare.com.au. Built on modern infrastructure, mobile-first, fast-loading, optimised for both search rankings and patient conversion. Full detail in §08. Single largest single-investment item in the plan — and the foundation everything else depends on. <strong>Without a new site, every dollar spent on ads and SEO funnels patients into a 2020-vintage experience that erodes conversion.</strong></p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 02 · Always on</div>
+    <div class="play-title">Local SEO &amp; content program</div>
+    <p>The slow-but-compounding channel. We rebuild the SEO foundation (page titles, meta descriptions, schema markup, site speed, internal linking), publish suburb-specific landing pages for the inner-north catchment, restart the blog with 2 monthly articles on topics that match patient search behaviour, and execute backlink outreach to local Canberra publications and dental directories. Expected impact: meaningful map-pack visibility within 60 days, top-3 organic visibility on core keywords inside 6 months.</p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 03 · The free channel that matters most</div>
+    <div class="play-title">Google Business Profile transformation</div>
+    <p>The single highest-ROI channel in local dental marketing — and currently underused. We rebuild the profile from the ground up: optimised primary &amp; secondary categories, full services menu with from-prices where appropriate, comprehensive Q&amp;A, weekly Google Posts (a 5-minute task that signals activity to Google), guidance to the practice on a quarterly photo refresh (phone-shot is fine — patients trust real over staged), and review reply templates for every new review good or bad. <strong>Goal: 50+ new Google reviews inside 90 days from existing patient base, taking the practice past Dental Embassy in raw review count.</strong></p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 04 · Growth &amp; Scale tiers</div>
+    <div class="play-title">Google Ads — high-intent capture</div>
+    <p>Google Ads is the fastest lever in dental marketing. Patients searching "emergency dentist Canberra" at 11pm on a Tuesday want one thing: to book. GYA builds and manages dedicated Google Ads campaigns targeting the highest-intent search queries (emergency, near-me, specific service terms), routed to bespoke landing pages on the new site, with conversion tracking back through GA4 to attribute every booked appointment to the keyword that drove it.</p>
+    <p><strong>How GYA charges for paid media:</strong> the retainer covers campaign strategy, build, management, optimisation, and reporting. <strong>Media spend (i.e. the budget that goes to Google) is always paid directly by the practice to Google</strong> — GYA never marks up media or runs it through our account. This keeps the engagement transparent and means the practice always owns the ad account, the data, and the audiences.</p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 05 · Scale tier only</div>
+    <div class="play-title">Meta (Facebook + Instagram) — lead generation engine</div>
+    <p>This is the workstream that defines the Scale tier. Where Google Ads captures patients who are already searching for a dentist, Meta puts the practice in front of patients who <em>aren't searching yet but should be</em>. The play is Meta Lead Gen forms targeted at the inner-north geo (5km around Lyneham), specifically: new patient offers, Invisalign / smile makeover campaigns, kids' first dental visit, and seasonal moments (back-to-school, end-of-year private health benefits expiry). Every lead captured flows directly into SmileOx (also Scale tier) for instant SMS follow-up — typically within 60 seconds of form submission.</p>
+    <p>As with Google Ads, <strong>media spend is paid directly by the practice to Meta</strong>; the Scale retainer covers strategy, creative production, audience build, campaign management, and reporting. Budget is sized seasonally — heavier in spring/summer (cosmetic season) and December (private health benefits "use it or lose it" period). Right starting point agreed with Dr Patrick.</p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 06 · Scale tier only · Requires SmileOx</div>
+    <div class="play-title">Reputation system — Google reviews automation</div>
+    <p>The current review gap vs Dental Embassy is the most fixable problem in this entire proposal — but the fix requires the SmileOx CRM infrastructure (Workstream 07) to be in place, which is why this workstream sits in the Scale tier. Mechanism: automated SMS request to every patient 30 minutes after appointment completion, with a one-tap link to leave a Google review. We A/B-test the timing (some practices win at "as the patient leaves the chair", others at "the next morning") and the copy. With a four-dentist practice seeing meaningful daily volume, the math is straightforward: 5–10 review requests per day at a 15% response rate = 25–50 new reviews per month. Closes the Dental Embassy gap inside 90 days.</p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 07 · Scale tier only</div>
+    <div class="play-title">SmileOx CRM — the patient retention engine</div>
+    <p>The Scale tier centres on SmileOx — the dental-specific CRM platform GYA deploys across our 100+ practice network. SmileOx becomes the practice's automation backbone, covering: instant SMS follow-up to every Meta lead (typically within 60 seconds of form submission), new-patient welcome sequences, post-treatment follow-up, recall reminders (6-monthly check-up), reactivation campaigns for patients lapsed 12+ months, birthday messages, treatment plan follow-up, post-Invisalign-consult nurture, and patient newsletters.</p>
+    <p>SmileOx is normally <strong>$999 per month</strong> direct subscription. <strong>As part of the GYA Scale tier, this is offered at the discounted rate of $199 per month</strong> — included with the Scale retainer. The reactivation channel alone (emailing/SMSing the existing 20-year patient list) typically returns the cost of the entire CRM subscription multiple times over inside the first quarter.</p>
+  </div>
+
+  <div class="play">
+    <div class="play-tag">Workstream 08 · Scale tier only</div>
+    <div class="play-title">Social media — posting &amp; content design</div>
+    <p>Also part of the Scale tier: GYA produces and posts to the practice's Facebook and Instagram on a regular cadence. This covers content design (custom graphics in the practice's brand), captions, hashtag strategy, and scheduled posting — mixing team content, before/afters where consent allows, patient education, seasonal moments, and Billable-Miles-style community engagement. The goal isn't to win on social as an acquisition channel (it rarely is for dental); it's to look <em>alive and current</em> to the patient who clicks through from Google to your Instagram before booking — the same patient who currently lands on a quiet feed and forms the wrong impression.</p>
+  </div>
+
+  <h3><span class="marker">7.9</span>Workstream priorities — what runs first</h3>
+
+  <p>Not everything starts at the same moment. The sequencing below is the order we'd execute, with rough start weeks. Workstreams flagged "Scale" only run if Lyneham Dental Care selects the Scale tier.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Workstream</th><th>Tier</th><th>Start week</th><th>First visible impact</th></tr></thead>
+      <tbody>
+        <tr><td><strong>01 · Website rebuild</strong></td><td>All tiers</td><td>Week 1</td><td>Week 6 (live)</td></tr>
+        <tr><td><strong>03 · GBP transformation</strong></td><td>All tiers</td><td>Week 1</td><td>Week 2–3</td></tr>
+        <tr><td><strong>02 · SEO foundation</strong></td><td>All tiers</td><td>Week 3</td><td>Week 8–10 onwards (compounding)</td></tr>
+        <tr><td><strong>04 · Google Ads</strong></td><td>Growth &amp; Scale</td><td>Week 6 (post-launch)</td><td>Week 6 (same day)</td></tr>
+        <tr><td><strong>07 · SmileOx CRM</strong></td><td>Scale only</td><td>Week 4</td><td>Week 6 onwards</td></tr>
+        <tr><td><strong>06 · Reviews automation</strong></td><td>Scale only (needs SmileOx)</td><td>Week 5</td><td>Week 6 onwards</td></tr>
+        <tr><td><strong>05 · Meta Lead Gen</strong></td><td>Scale only</td><td>Week 8</td><td>Week 8 onwards</td></tr>
+        <tr><td><strong>08 · Social posting &amp; design</strong></td><td>Scale only</td><td>Week 6 (with site launch)</td><td>Week 6 onwards</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ PART 8 WEBSITE REBUILD ============ -->
+<section id="part-8" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 08</div>
+    <div>
+      <div class="section-label">Part Eight</div>
+      <h2 class="section-title">Website<br><em>rebuild.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">The website is the foundation. Every other workstream funnels patients through it; if it doesn't convert, nothing else compounds. Here's exactly what we'd build.</p>
+
+  <h3><span class="marker">8.1</span>Design direction</h3>
+  <p>The new lynehamdentalcare.com.au should feel like the upgrade story the practice itself is telling: established, trusted, modernised. Not a generic corporate dental template, not an overdesigned hospitality-brand experience, but something that:</p>
+  <ul>
+    <li>Reads as <strong>warm and clinical at once</strong> — a calmer palette (soft whites, deep neutrals, one strong brand accent), confident typography, real photography</li>
+    <li>Foregrounds the <strong>people</strong> — Dr Patrick Huang and the team, with proper photography and individual dentist pages</li>
+    <li>Communicates <strong>20 years of trust</strong> — clearly and prominently, in the hero section, on every service page</li>
+    <li>Makes <strong>booking</strong> the single most obvious action on every page — a sticky "Book online" button, multiple in-page CTAs, online booking widget integrated natively</li>
+    <li>Works <strong>flawlessly on mobile</strong> — because 65%+ of dental searches in Canberra resolve on phones</li>
+  </ul>
+
+  <h3><span class="marker">8.2</span>Page architecture</h3>
+  <p>The full sitemap:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Page</th><th>Purpose</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Home</strong></td><td>First impression, hero positioning, services overview, team intro, social proof, online booking CTA</td><td>Tier 1</td></tr>
+        <tr><td><strong>About / Our story</strong></td><td>20-year history, practice values, accreditation, what makes the practice different</td><td>Tier 1</td></tr>
+        <tr><td><strong>Our dentists</strong></td><td>Index of 4 dentists with photos and bio links</td><td>Tier 1</td></tr>
+        <tr><td>Individual dentist pages × 4</td><td>Dr Patrick Huang, Dr Hung-Ting Lin, Dr Kaitlyn Beers, Dr Teresa Viengkhou — credentials, special interests, photography</td><td>Tier 1</td></tr>
+        <tr><td><strong>Services</strong></td><td>Hub page</td><td>Tier 1</td></tr>
+        <tr><td>General dentistry</td><td>Service detail with FAQ, pricing guidance</td><td>Tier 1</td></tr>
+        <tr><td>Cosmetic dentistry</td><td>Service detail with before/after, FAQ</td><td>Tier 1</td></tr>
+        <tr><td>Children's dentistry</td><td>Service detail, family-focused</td><td>Tier 1</td></tr>
+        <tr><td>Emergency dentistry</td><td>Same-day promise, what to do now, phone CTA</td><td>Tier 1</td></tr>
+        <tr><td>Invisalign / clear aligners</td><td>Dedicated service page — high-value, high-volume search</td><td>Tier 1</td></tr>
+        <tr><td>Dental implants</td><td>Dedicated page — high-value</td><td>Tier 2</td></tr>
+        <tr><td>Teeth whitening</td><td>Promo-friendly page</td><td>Tier 2</td></tr>
+        <tr><td>Veneers</td><td>Cosmetic-focused page with before/after</td><td>Tier 2</td></tr>
+        <tr><td>Wisdom teeth removal</td><td>High-intent service page</td><td>Tier 2</td></tr>
+        <tr><td><strong>Locations / suburbs served</strong></td><td>Hub for suburb-specific landing pages</td><td>Tier 1</td></tr>
+        <tr><td>Dentist in Lyneham · Dickson · Braddon · Ainslie · Turner · O'Connor · Watson</td><td>7 suburb-specific landing pages for local SEO</td><td>Tier 2</td></tr>
+        <tr><td><strong>New patients</strong></td><td>What to expect, first appointment, health funds accepted, new patient offer</td><td>Tier 1</td></tr>
+        <tr><td><strong>Book online</strong></td><td>Integrated booking widget (Healthengine, HotDoc, or native)</td><td>Tier 1</td></tr>
+        <tr><td><strong>Pricing / fees</strong></td><td>From-prices, health fund acceptance, payment plans</td><td>Tier 1</td></tr>
+        <tr><td><strong>Contact</strong></td><td>Address, map, hours, phone, contact form, parking info</td><td>Tier 1</td></tr>
+        <tr><td><strong>Blog / News</strong></td><td>Content hub — restart monthly publication</td><td>Tier 2</td></tr>
+        <tr><td><strong>FAQs</strong></td><td>Common patient questions — also feeds schema markup</td><td>Tier 2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Tier 1 pages launch with the initial site (Week 6). Tier 2 pages roll out in waves over weeks 7–12, each one a dedicated landing target for SEO and ads.</p>
+
+  <h3><span class="marker">8.3</span>Conversion features</h3>
+  <ul>
+    <li><strong>Online booking widget</strong> — integrated into the site header (sticky), and embedded on every service page. Healthengine and HotDoc both integrate cleanly; we recommend HotDoc for the depth of practice management integration.</li>
+    <li><strong>Click-to-call</strong> — every phone number on the site is tap-to-call on mobile, with conversion tracking.</li>
+    <li><strong>Live chat or WhatsApp</strong> — patient-friendly conversation channel for "I have a question before booking" moments.</li>
+    <li><strong>New patient offer</strong> — a single, prominent offer (e.g. complimentary new patient consultation, or a packaged check-up + clean + X-rays at a stand-out promotional rate) positioned in the hero and repeated through the site.</li>
+    <li><strong>Trust badges</strong> — AHPRA registration, ADA membership, accreditations, payment plan partners (Afterpay/ZipPay/Humm), health fund logos.</li>
+    <li><strong>Patient reviews carousel</strong> — pulled live from Google reviews, embedded on the homepage and key service pages.</li>
+    <li><strong>Before/after gallery</strong> — for cosmetic and Invisalign cases (with patient consent and AHPRA-compliant disclaimers).</li>
+    <li><strong>Sticky bottom-of-screen CTA on mobile</strong> — "Book online" + "Call now" always visible while scrolling.</li>
+  </ul>
+
+  <h3><span class="marker">8.4</span>Technical foundation</h3>
+  <ul>
+    <li><strong>Built on modern static HTML / hand-coded</strong> (the GYA standard for dental practices) — significantly faster than WordPress, more secure, lower lifetime maintenance cost</li>
+    <li><strong>Deployed via Vercel</strong> with global CDN — sub-1-second load times even on mobile networks</li>
+    <li><strong>Full schema markup</strong> — LocalBusiness, Dentist, FAQPage, Service, Review — gives Google rich result eligibility</li>
+    <li><strong>Pixel-perfect mobile responsive</strong> design from the ground up</li>
+    <li><strong>Google Analytics 4, Google Search Console, Meta Pixel, Google Ads conversion tracking</strong> all installed at launch</li>
+    <li><strong>AHPRA compliance review</strong> — every page reviewed against AHPRA dental advertising guidelines before publication</li>
+    <li><strong>SSL, daily backups, 99.99% uptime</strong></li>
+  </ul>
+
+  <h3><span class="marker">8.5</span>Content production</h3>
+  <p>GYA writes 100% of the site copy, briefed against the practice's positioning and reviewed in two rounds with Dr Patrick. Imagery for the new site is sourced and supplied by GYA — a combination of premium licensed photography and bespoke graphic design tuned to the practice's brand. The site goes live with a complete, professional visual identity from day one.</p>
+</section>
+
+<!-- ============ PART 9 ROADMAP ============ -->
+<section id="part-9" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 09</div>
+    <div>
+      <div class="section-label">Part Nine</div>
+      <h2 class="section-title">90-day<br><em>roadmap.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">From signed agreement to a fully operational digital growth engine in 12 weeks.</p>
+
+  <div class="roadmap">
+
+    <div class="phase">
+      <div class="phase-range">Phase I<span class="big">01—14</span><span class="sub">Foundation &amp; quick wins</span></div>
+      <div>
+        <h3>Discovery, GBP, reviews.</h3>
+        <div class="week"><strong>Week 01</strong>Kick-off call with Dr Patrick. Brand discovery. Access to current site, GBP, social accounts. Existing patient data review. Service priorities &amp; positioning decisions.</div>
+        <div class="week"><strong>Week 02</strong>Google Business Profile audit &amp; full rebuild. Reviews automation system goes live (SMS-based). First wave of patient review requests sent. Logo &amp; brand visual audit (refresh or retain).</div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-range">Phase II<span class="big">15—42</span><span class="sub">Build the website</span></div>
+      <div>
+        <h3>Design, copy, build, launch.</h3>
+        <div class="week"><strong>Week 03</strong>Wireframes &amp; sitemap approved with Dr Patrick. Copywriting begins on Tier 1 pages. Visual identity direction agreed (palette, typography, imagery approach).</div>
+        <div class="week"><strong>Week 04</strong>Visual design direction approved. First three Tier 1 pages drafted &amp; reviewed.</div>
+        <div class="week"><strong>Week 05</strong>Remaining Tier 1 pages built. Online booking integration tested. Tech stack &amp; analytics installed. AHPRA compliance review.</div>
+        <div class="week"><strong>Week 06</strong>Final review. Soft launch on a staging URL. Go live mid-week with full QA. Site indexed by Google, schema validated.</div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-range">Phase III<span class="big">43—70</span><span class="sub">Activate paid &amp; CRM</span></div>
+      <div>
+        <h3>Google Ads, SmileOx, content begins.</h3>
+        <div class="week"><strong>Week 07</strong>Google Ads campaigns built &amp; launched (emergency, general dentistry, near-me). Initial budget agreed with Dr Patrick. Conversion tracking validated.</div>
+        <div class="week"><strong>Week 08</strong>SmileOx CRM build-out begins <em>(Scale tier only)</em>. Existing patient list imported &amp; segmented. First automation (post-appointment review request) goes live.</div>
+        <div class="week"><strong>Week 09</strong>Tier 2 service pages launched (Invisalign, implants, whitening, veneers, wisdom teeth). Meta Lead Gen campaigns launched at agreed budget <em>(Scale tier only)</em>. First monthly blog post published.</div>
+        <div class="week"><strong>Week 10</strong>Suburb landing pages launched (Lyneham, Dickson, Braddon, Ainslie, Turner, O'Connor, Watson). Backlink outreach begins to Canberra publications &amp; dental directories.</div>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-range">Phase IV<span class="big">71—90</span><span class="sub">Optimise &amp; scale</span></div>
+      <div>
+        <h3>Iterate, optimise, scale.</h3>
+        <div class="week"><strong>Week 11</strong>Email reactivation campaign sent to lapsed-patient list (12+ months since last visit). First month of Google Ads data reviewed; budget reallocated to top-converting keywords.</div>
+        <div class="week"><strong>Week 12</strong>90-day review with Dr Patrick. Full reporting: site traffic, ranking changes, GBP performance, new patient bookings attributed to channel, ad spend ROI, review volume vs. baseline. Next-quarter plan &amp; budget agreed.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ PART 10 ENGAGEMENT ============ -->
+<section id="part-10" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 10</div>
+    <div>
+      <div class="section-label">Part Ten</div>
+      <h2 class="section-title">How we<br>work <em>together.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">A one-off website rebuild, plus a monthly retainer tier of Lyneham Dental Care's choosing. Three tiers — Foundation, Growth, and Scale — each adding capability on top of the previous. Paid media spend (Google Ads, Meta) is always paid directly by the practice to the ad platforms; GYA never marks up media.</p>
+
+  <h3><span class="marker">10.1</span>The website rebuild</h3>
+
+  <div class="stats">
+    <div class="stat"><span class="num">$4,500</span><span class="label">Website rebuild · Complete · One-off</span></div>
+    <div class="stat"><span class="num">All Tiers</span><span class="label">The website sits underneath all three tiers · Required foundation</span></div>
+    <div class="stat"><span class="num">~6 weeks</span><span class="label">From kickoff to live · Per the §09 roadmap</span></div>
+  </div>
+
+  <p style="font-size:13px;color:var(--muted);font-style:italic">All amounts AUD, excluding GST.</p>
+
+  <h3><span class="marker">10.2</span>Three monthly tiers</h3>
+
+  <div class="tiers">
+    <div class="tier">
+      <div class="tier-name">Tier 01 · Foundation</div>
+      <div class="tier-title">SEO foundation</div>
+      <div class="tier-price">$1,690<span class="small">/mo</span></div>
+      <div class="tier-sub">Build organic visibility, slowly compound</div>
+      <ul>
+        <li>Google Business Profile management &amp; weekly Google Posts</li>
+        <li>Local SEO foundation (on-page, technical, schema, internal linking)</li>
+        <li>2 blog posts per month, SEO-optimised &amp; AHPRA-compliant</li>
+        <li>Ongoing keyword expansion &amp; ranking optimisation</li>
+        <li>Backlink outreach to Canberra publications &amp; dental directories</li>
+        <li>Monthly performance reporting (one-page dashboard)</li>
+        <li>Quarterly strategy review with Dr Patrick</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <div class="tier-name">Tier 02 · Growth</div>
+      <div class="tier-title">SEO + Google Ads</div>
+      <div class="tier-price">$2,500<span class="small">/mo</span></div>
+      <div class="tier-sub">Adds Google Ads management to the Foundation tier</div>
+      <ul>
+        <li>Everything in Foundation</li>
+        <li><strong>Google Ads campaign management</strong> — strategy, build, ongoing optimisation, conversion tracking, reporting</li>
+        <li>Dedicated landing pages for paid traffic (built into the site rebuild)</li>
+        <li>Suburb-specific landing page creation (Lyneham · Dickson · Braddon · Ainslie · Turner · O'Connor · Watson)</li>
+        <li>Monthly Google Ads performance review with cost-per-booked-appointment reporting</li>
+        <li><strong>Paid media spend</strong> — paid directly by the practice to Google. GYA never marks up media.</li>
+      </ul>
+    </div>
+
+    <div class="tier featured">
+      <div class="tier-name">Tier 03 · Scale</div>
+      <div class="tier-title">Full lead-gen engine</div>
+      <div class="tier-price">Custom<span class="small">/mo</span></div>
+      <div class="tier-sub">The recommended tier to dominate inner-north Canberra</div>
+      <ul>
+        <li>Everything in Growth</li>
+        <li><strong>Meta lead-generation ads</strong> (Facebook + Instagram), creative production &amp; campaign management — paid media direct to Meta</li>
+        <li><strong>SmileOx CRM integration</strong> (normally $999/mo direct subscription — included at the discounted Scale rate of $199/mo)</li>
+        <li><strong>Reviews automation system</strong> — SMS-based review requests post-appointment via SmileOx</li>
+        <li>Patient SMS &amp; email automations — recall, reactivation, post-treatment, birthday, treatment plan follow-up</li>
+        <li><strong>Social content design &amp; posting</strong> — Facebook + Instagram, custom branded content, ongoing posting cadence</li>
+        <li>Bi-weekly strategy calls with Dr Patrick</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="callout-label">A few notes on the tiers</div>
+    <p><strong>Scale tier pricing is bespoke</strong> — we discuss this directly with Dr Patrick to size it against the practice's appetite for lead-generation volume and the SmileOx automation scope. The SmileOx component alone (discounted from $999 to $199/mo) makes the math attractive even before the Meta lead-gen and reviews automation are counted.</p>
+    <p><strong>Paid media spend is always direct.</strong> Whether on Google or Meta, the practice pays the platform directly — GYA never marks up media or runs spend through our account. The monthly retainer covers strategy, build, and management only. This keeps the engagement transparent, and the practice always owns the ad account, the data, and the audiences.</p>
+    <p><strong>No long lock-in.</strong> Retainer agreements are month-to-month after an initial 3-month commitment. If we're not earning our keep, the relationship ends without acrimony.</p>
+  </div>
+
+  <h3><span class="marker">10.3</span>Why this pays back</h3>
+
+  <p>The unit economics of dental marketing are unusually favourable when the program is built correctly:</p>
+
+  <ul>
+    <li><strong>Lifetime patient value compounds.</strong> A new patient acquired today is, on average, a six-monthly check-up patient for the next 5–10 years. The marketing cost is paid once; the revenue continues. This is structurally different from most B2C categories.</li>
+    <li><strong>Reactivation is nearly free revenue.</strong> Lyneham Dental Care's 20-year patient list is the single highest-margin marketing asset in the practice — these patients have already been acquired, and the cost to re-engage them via SMS and email (in the Scale tier) is negligible. In most GYA dental engagements, the reactivation channel alone repays the SmileOx subscription many times over inside the first quarter.</li>
+    <li><strong>The website is a multi-year asset.</strong> A properly built site delivers compounding value across the entire engagement window — every patient who books through it, every search query it ranks for, every ad it converts.</li>
+    <li><strong>Reputation compounds faster than spend.</strong> Once the Scale-tier reviews automation flywheel is running, each new review costs almost nothing but lifts conversion on every other channel.</li>
+  </ul>
+
+  <p>Across GYA's 100+ dental clinic network, well-executed programs typically pay back the monthly retainer at a multiple of 2–6× in attributable patient revenue inside 90–120 days — with the higher multiples coming from practices with strong existing reputations, capable teams with chair capacity, and the willingness to lean into the Scale tier. Lyneham Dental Care fits all three.</p>
+</section>
+
+<!-- ============ PART 11 WHY GYA ============ -->
+<section id="part-11" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 11</div>
+    <div>
+      <div class="section-label">Part Eleven</div>
+      <h2 class="section-title">Why<br><em>GYA.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">Six reasons to choose GYA over the alternative (which is most likely either a generalist agency, a freelancer, or doing nothing).</p>
+
+  <ol>
+    <li><strong>We only do dental marketing well.</strong> 100+ active dental clinics means we see what's working across the network in real time. Lyneham Dental Care benefits from every lesson we've learned at Horizon, Synergy, Implant 360, Crestmead, Haberfield, and the rest.</li>
+    <li><strong>One accountable partner, not five vendors.</strong> Website, SEO, ads, CRM, content, reporting — under one roof, with one team, with one monthly invoice. No finger-pointing when the ads underperform because the site converts badly.</li>
+    <li><strong>SmileOx specialists.</strong> GYA is one of a small number of agencies in Australia certified to build out SmileOx end-to-end. This matters because the CRM and automation layer is where 80% of the long-term return on dental marketing actually comes from.</li>
+    <li><strong>AHPRA-compliant from the first draft.</strong> Every word published, every image used, every offer made is reviewed against AHPRA dental advertising guidelines before it goes live. We've never had a client flagged.</li>
+    <li><strong>Transparent monthly reporting.</strong> One-page dashboard, every month, in plain language. Traffic, rankings, calls, bookings, cost per booking, revenue attributed, ROI. No 50-page analytics PDFs no-one reads.</li>
+    <li><strong>No long lock-in.</strong> Retainer agreements are month-to-month after the initial 3-month commitment. If we're not earning our keep, the relationship ends without acrimony. We're confident enough in the program to put it on those terms.</li>
+  </ol>
+</section>
+
+<!-- ============ PART 12 NEXT STEPS ============ -->
+<section id="part-12" data-reveal>
+  <div class="section-head">
+    <div class="section-num">§ 12</div>
+    <div>
+      <div class="section-label">Part Twelve</div>
+      <h2 class="section-title">Next<br><em>steps.</em></h2>
+    </div>
+  </div>
+
+  <p class="lede">If this lines up with where Lyneham Dental Care wants to go, the path forward is short.</p>
+
+  <ol>
+    <li><strong>A 30-minute call</strong> with Dr Patrick to walk through this document, answer questions, and confirm fit. No commitment required at this stage.</li>
+    <li><strong>Tier selection</strong> — Foundation, Growth, or Scale — confirmed with Dr Patrick.</li>
+    <li><strong>Engagement letter</strong> issued by GYA, signed by both parties. Initial setup invoice for the website build issued on signature.</li>
+    <li><strong>Kick-off call</strong> within 7 days of signing. The 90-day program begins.</li>
+  </ol>
+
+  <p>To progress, please reply to this document or contact Rowayne directly:</p>
+
+  <div class="callout">
+    <div class="callout-label">Contact</div>
+    <p><strong>Rowayne</strong><br>Generate Your Audience<br>Sydney · Crows Nest &amp; Parramatta offices</p>
+    <p>The most efficient next step is a 30-minute video call at a time that suits Dr Patrick — we'll come to the practice for the kick-off proper.</p>
+  </div>
+
+  <p>Thank you for the opportunity to put this together. Whatever you decide on a partner, the underlying observation in this proposal stands: Lyneham Dental Care has all the clinical and operational foundations to be the leading inner-north Canberra dental practice. The next chapter is digital.</p>
+</section>
+
+</main>
+</div><!-- /.grid -->
+</div><!-- /.wrap -->
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap" style="position:relative">
+    <div class="mark-out">GYA</div>
+    <div class="footer-meta">
+      <div>Prepared by<strong>Generate Your Audience</strong></div>
+      <div>For<strong>Lyneham Dental Care<br>Dr Patrick Huang</strong></div>
+      <div>Contact<strong>Rowayne · GYA<br>Sydney · Crows Nest &amp; Parramatta</strong></div>
+      <div>Document<strong>LDC-Proposal · Rev 01<br>15 May 2026 · Confidential</strong></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reveal — same robust pattern as CCR doc
+const revealEls = document.querySelectorAll('[data-reveal]');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
+revealEls.forEach(el => io.observe(el));
+
+function revealIfInView() {
+  revealEls.forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) {
+      el.classList.add('in');
+    }
+  });
+}
+revealIfInView();
+window.addEventListener('load', revealIfInView);
+setTimeout(() => {
+  document.querySelectorAll('[data-reveal]:not(.in)').forEach(el => el.classList.add('in'));
+}, 1500);
+
+// Active TOC highlight
+const tocLinks = document.querySelectorAll('.toc a');
+const sections = Array.from(document.querySelectorAll('main section'));
+const spy = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const id = e.target.id;
+      tocLinks.forEach(a => {
+        if (a.getAttribute('href') === '#' + id) { a.style.color = 'var(--coral)'; }
+        else { a.style.color = ''; }
+      });
+    }
+  });
+}, { rootMargin: '-40% 0px -50% 0px' });
+sections.forEach(s => s.id && spy.observe(s));
+</script>
+
+</body>
+</html>
